@@ -1,0 +1,392 @@
+/* ------ Specification ------ */
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  background: #fafafa;
+}
+
+div,
+p,
+form,
+input,
+a,
+span,
+button {
+  box-sizing: border-box;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+ul,
+li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+
+button,
+input {
+  transition: all 0.5s ease;
+}
+
+input,
+input:hover,
+input:focus,
+input:active,
+button,
+button:hover,
+button:focus,
+button:active {
+  outline: none;
+}
+
+/* ------ Wrapper ------ */
+.wrapper {
+  display: flex;
+  position: relative;
+}
+
+.menu {
+  height: 100vh;
+  width: 240px;
+  padding: 40px 40px 0 0;
+  box-sizing: border-box;
+  background: #f3f4f9;
+  transition: all 0.2s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.menu__logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 62px;
+  margin-left: 45px;
+}
+
+.menu__img {
+  width: 50px;
+  height: 50px;
+}
+
+.menu__name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.menu__btn {
+  position: absolute;
+  top: 0;
+  right: -48px;
+  display: flex;
+  align-items: center;
+}
+
+.menu__btn_active {
+  display: none;
+}
+
+.menu__burger {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.menu__burger_active {
+  display: none;
+}
+
+.menu__burger_close {
+  display: none;
+}
+
+.menu__list {
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu__item {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  color: #000;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+}
+
+.menu__item:hover {
+  color: #34abe0;
+  border-left-color: #34abe0;
+}
+
+.menu__item:hover .menu__link {
+  color: #34abe0;
+}
+
+.menu__item_active,
+.menu__item_active .menu__link {
+  border-left-color: #34abe0;
+  color: #34abe0;
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 42px;
+  color: #333333;
+}
+
+.menu__text {
+  margin-left: 10px;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.menu__icon {
+  font-size: 24px;
+}
+
+/* ------ Content ------ */
+.content {
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.offer {
+  background: #ffffff;
+  width: 100%;
+  padding: 40px 60px 0px 60px;
+}
+
+.offer__title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.search {
+  padding: 31px 60px 40px 60px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 10;
+  position: relative;
+}
+
+.search_scroll {
+  position: fixed;
+  top: 0px;
+  z-index: 101;
+  padding-left: 77px;
+}
+
+.search__group {
+  position: relative;
+}
+
+.search__input {
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  border-radius: 100px;
+  padding: 12px 16px 12px 44px;
+  font-size: 18px;
+}
+
+.search__icon {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  transform: rotate(90deg);
+  color: #d6d6d6;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.coupons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 60px 100px 60px;
+}
+
+.coupon {
+  padding: 16px 20px;
+  width: 347px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  position: relative;
+}
+
+.coupon_active {
+  border: 1px solid #df212d;
+}
+
+.coupon::before,
+.coupon::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  top: 45%;
+  background: #fafafa;
+  position: absolute;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+
+.coupon::before {
+  left: -9px;
+  transform: rotate(45deg);
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+
+.coupon::after {
+  right: -9px;
+  transform: rotate(-45deg);
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid #ffffff;
+}
+
+.coupon_active::before {
+  border-top-color: #df212d;
+  border-right-color: #df212d;
+}
+
+.coupon_active::after {
+  border-top-color: #df212d;
+  border-left-color: #df212d;
+}
+
+.coupon:hover:before {
+  border-top-color: #df212d;
+  border-right-color: #df212d;
+}
+
+.coupon:hover:after {
+  border-top-color: #df212d;
+  border-left-color: #df212d;
+}
+
+.coupon:hover {
+  border-color: #df212d;
+}
+
+.coupon_wine {
+  background: #ffffff url(../image/wine.png) no-repeat center right;
+}
+
+.coupon_beer {
+  background: #ffffff url(../image/beer.png) no-repeat center right;
+}
+
+.coupon_cake {
+  background: #ffffff url(../image/cake.png) no-repeat center right;
+}
+
+.coupon_sushi {
+  background: #ffffff url(../image/sushi.png) no-repeat center right;
+}
+
+.coupon_fruits {
+  background: #ffffff url(../image/fruits.png) no-repeat center right;
+}
+
+.coupon_meat {
+  background: #ffffff url(../image/meat.png) no-repeat center right;
+}
+
+.coupon_shawarma {
+  background: #ffffff url(../image/shawarma.png) no-repeat center right;
+}
+
+.coupon_iceCream {
+  background: #ffffff url(../image/iceCream.png) no-repeat center right;
+}
+
+.top {
+  margin-bottom: 43px;
+}
+
+.top__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.top__text {
+  margin-top: 4px;
+  opacity: 0.5;
+}
+
+.bottom__title {
+  font-weight: 500;
+  color: #df212d;
+}
+
+.bottom__text {
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: 0.4em;
+  opacity: 0.5;
+  margin-top: 6px;
+}

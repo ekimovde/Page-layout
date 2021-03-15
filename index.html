@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Layout</title>
+    <!-- Google Fonts Roboto-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts Open Sans-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts Poppins-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Media Queries CSS -->
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="menu" id="menu">
+        <div class="menu__logo">
+          <img src="../image/logo.png" alt="" class="menu__img" />
+          <span class="menu__name menu__name_active" id="menuName">Beco</span>
+        </div>
+        <div class="menu__btn menu__btn_active">
+          <svg
+            width="48"
+            height="106"
+            viewBox="0 0 48 106"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0C0 11.7415 9.99255 16.1938 20.8591 21.0356C33.809 26.8055 48 33.1285 48 53C48 72.8715 33.809 79.1945 20.8591 84.9644C9.99255 89.8062 0 94.2585 0 106V0Z"
+              fill="#F3F4F9"
+            />
+          </svg>
+          <i class="bx bx-menu menu__burger" id="burgerActive"></i>
+          <i
+            class="bx bx-x menu__burger menu__burger_close"
+            id="burgerClose"
+          ></i>
+        </div>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              <i class="bx bx-grid-alt menu__icon"></i>
+              <span class="menu__text menu__text_active" id="menuText"
+                >Каталог</span
+              >
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              <i class="bx bx-pulse menu__icon"></i>
+              <span class="menu__text menu__text_active" id="menuText"
+                >Здоровье</span
+              >
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              <i class="bx bx-heart menu__icon"></i>
+              <span class="menu__text menu__text_active" id="menuText"
+                >Красота</span
+              >
+            </a>
+          </li>
+          <li class="menu__item menu__item_active">
+            <a href="#" class="menu__link">
+              <i class="bx bxl-github menu__icon"></i>
+              <span class="menu__text menu__text_active" id="menuText"
+                >Развлечения</span
+              >
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              <i class="bx bxs-truck menu__icon"></i>
+              <span class="menu__text menu__text_active" id="menuText"
+                >Авто</span
+              >
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <section class="content">
+        <div class="offer">
+          <h3 class="offer__title">Развлечения</h3>
+        </div>
+        <div class="search" id="search">
+          <div class="search__group">
+            <i class="bx bx-search search__icon"></i>
+            <input
+              type="text"
+              class="search__input"
+              placeholder="Какой магазин вам нужен?"
+            />
+          </div>
+        </div>
+        <div class="coupons">
+          <div class="coupon coupon_active coupon_wine">
+            <div class="top">
+              <h4 class="top__title">Пробка на мира</h4>
+              <p class="top__text">Вечер для двоих</p>
+            </div>
+            <div class="bottom">
+              <h2 class="bottom__title">-50%</h2>
+              <p class="bottom__text">Скидка</p>
+            </div>
+          </div>
+          <div class="coupon coupon_beer">
+            <div class="top">
+              <h4 class="top__title">Кино и немцы</h4>
+              <p class="top__text">Бесплатный бокал пива</p>
+            </div>
+            <div class="bottom">
+              <h2 class="bottom__title">Варвар</h2>
+              <p class="bottom__text">Промокод</p>
+            </div>
+          </div>
+          <div class="coupon coupon_cake">
+            <div class="top">
+              <h4 class="top__title">Valery Cakes</h4>
+              <p class="top__text">Торт</p>
+            </div>
+            <div class="bottom">
+              <h2 class="bottom__title">-30%</h2>
+              <p class="bottom__text">Скидка</p>
+            </div>
+          </div>
+          <div class="coupon coupon_sushi">
+            <div class="top">
+              <h4 class="top__title">Sushi Sell</h4>
+              <p class="top__text">Набор "Праздник"</p>
+            </div>
+            <div class="bottom">
+              <h2 class="bottom__title">45%</h2>
+              <p class="bottom__text">Скидка</p>
+            </div>
+          </div>
+          <div class="coupon coupon_fruits">
+            <div class="top">
+              <h4 class="top__title">Mangosteen</h4>
+              <p class="top__text">Фрукт в подарок</p>
+            </div>
+            <div class="bottom">
+              <h2 class="bottom__title">J130</h2>
+              <p class="bottom__text">Купон</p>
+            </div>
+          </div>
+          <div class="coupon coupon_meat">
+            <div class="top">
+              <h4 class="top__title">Теленок табака</h4>
+              <p class="top__text">Стейк "Мачете"</p>
+            </div>
+            <div class="bottom">
+              <h2 class="bottom__title">20%</h2>
+              <p class="bottom__text">Скидка</p>
+            </div>
+          </div>
+          <div class="coupon coupon_shawarma">
+            <div class="top">
+              <h4 class="top__title">Fire Food</h4>
+              <p class="top__text">Вторая шаурма в подарок</p>
+            </div>
+            <div class="bottom">
+              <h2 class="bottom__title">Огонь</h2>
+              <p class="bottom__text">Промокод</p>
+            </div>
+          </div>
+          <div class="coupon coupon_iceCream">
+            <div class="top">
+              <h4 class="top__title">Aroma Cremeria</h4>
+              <p class="top__text">Джелато "Пармезан"</p>
+            </div>
+            <div class="bottom">
+              <h2 class="bottom__title">20%</h2>
+              <p class="bottom__text">Скидка</p>
+            </div>
+          </div>
+          <div class="coupon coupon_wine">
+            <div class="top">
+              <h4 class="top__title">Пробка на мира</h4>
+              <p class="top__text">Вечер для двоих</p>
+            </div>
+            <div class="bottom">
+              <h2 class="bottom__title">J130</h2>
+              <p class="bottom__text">Купон</p>
+            </div>
+          </div>
+          <div class="coupon coupon_beer">
+            <div class="top">
+              <h4 class="top__title">Кино и немцы</h4>
+              <p class="top__text">Бесплатный бокал пива</p>
+            </div>
+            <div class="bottom">
+              <h2 class="bottom__title">Варвар</h2>
+              <p class="bottom__text">Промокод</p>
+            </div>
+          </div>
+          <div class="coupon coupon_cake">
+            <div class="top">
+              <h4 class="top__title">Valery Cakes</h4>
+              <p class="top__text">Торт</p>
+            </div>
+            <div class="bottom">
+              <h2 class="bottom__title">30%</h2>
+              <p class="bottom__text">Скидка</p>
+            </div>
+          </div>
+          <div class="coupon coupon_sushi">
+            <div class="top">
+              <h4 class="top__title">Sushi Sell</h4>
+              <p class="top__text">Набор "Праздник"</p>
+            </div>
+            <div class="bottom">
+              <h2 class="bottom__title">45%</h2>
+              <p class="bottom__text">Скидка</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
